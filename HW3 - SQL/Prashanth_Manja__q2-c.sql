@@ -1,0 +1,1 @@
+select distinct count(h.customer_id) as no_of_customers from horror_view h left join comedy_view a on h.customer_id=a.customer_id where a.customer_id is NULL;

@@ -1,0 +1,1 @@
+select concat(a.first_name," ",a.last_name) as name from actor a, film_actor fa, film f where f.film_id=fa.film_id and a.actor_id=fa.actor_id group by a.actor_id having count(a.actor_id)>1 order by name;
